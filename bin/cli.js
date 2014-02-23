@@ -21,6 +21,8 @@ seeder.run(function(err, data) {
     }
 
     if(data) {
-        console.log(data);
+        // process.stdout instad of console.log to avoid extra
+        // trailing newlines
+        process.stdout.write(data);
     }
 });
