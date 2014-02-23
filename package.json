@@ -10,7 +10,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run-script jscs && npm run-script jshint && npm run-script istanbul",
+    "jshint": "jshint .",
+    "jscs": "jscs -c ./.jscsrc lib/",
+    "istanbul": "istanbul test --print both ./node_modules/mocha/bin/_mocha"
   },
   "repository": {
     "type": "git",
@@ -29,7 +32,9 @@
   },
   "devDependencies": {
     "mocha": "~1.17.1",
-    "istanbul": "~0.2.4"
+    "istanbul": "~0.2.4",
+    "jshint": "~2.4.4",
+    "jscs": "~1.2.4"
   },
   "dependencies": {
     "shelljs": "~0.2.6",
