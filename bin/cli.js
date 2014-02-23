@@ -1,9 +1,26 @@
 /*jshint node:true */
 "use strict";
 
-var argv = require("nomnom")
-    .script("seeder")
-    .options(require("../args.js"))
-    .parse();
+var Seeder = require("../lib/seeder"),
+    argv   = require("nomnom")
+        .script("seeder")
+        .options(require("../args.js"))
+        .parse(),
 
-console.log(argv);
+    seeder;
+
+seeder = new Seeder(argv);
+
+seeder.run(function(err, data) {
+    if(err) {
+        console.error(err);
+
+        return process.on("exit", function() {
+            process.exit(1);
+        });
+    }
+
+    if(data) {
+        console.log(data);
+    }
+});
