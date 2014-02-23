@@ -1,0 +1,38 @@
+{
+  "name": "yui-seeder",
+  "version": "0.0.0",
+  "description": "Generate YUI module \"seed\" files, a collection of requirements",
+  "main": "lib/seeder.js",
+  "bin": {
+    "yui-seeder": "cli.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tivac/yui-seeder.git"
+  },
+  "keywords": [
+    "yui",
+    "loader",
+    "modules",
+    "rollup"
+  ],
+  "author": "Pat Cavit <pcavit@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tivac/yui-seeder/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "istanbul": "~0.2.4"
+  },
+  "dependencies": {
+    "shelljs": "~0.2.6",
+    "yui": "~3.14.1"
+  }
+}
