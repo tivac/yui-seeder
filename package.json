@@ -35,7 +35,9 @@
     "mocha": "~1.17.1",
     "istanbul": "~0.2.4",
     "jshint": "~2.4.4",
-    "jscs": "~1.2.4"
+    "jscs": "~1.2.4",
+    "nixt": "~0.3.0",
+    "proxyquire": "~0.5.2"
   },
   "dependencies": {
     "shelljs": "~0.2.6",
