@@ -1,13 +1,13 @@
 var multiConfigTwo = {
     groups : {
         two : {
-            base : "./two",
+            base : "./two/",
 
             modules : {
                 "d" : {
                     path : "d.js",
                     requires : [
-                        "e",
+                        "c",
                         "f"
                     ]
                 },

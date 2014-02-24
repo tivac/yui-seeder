@@ -2,7 +2,7 @@ YUI.add("d", function(){
     console.log("d");
 }, "", {
     requires : [
-        "e",
+        "c",
         "f"
     ]
 });

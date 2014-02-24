@@ -1,7 +1,7 @@
 var multiConfigOne = {
     groups : {
         one : {
-            base : "./one",
+            base : "./one/",
 
             modules : {
                 "a" : {
