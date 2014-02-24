@@ -7,11 +7,11 @@ var fs     = require("fs"),
 
     nixt    = require("nixt"),
 
+    temp    = path.join(__dirname, "/temp.js"),
     base    = "node ../../../bin/cli.js ",
     options = {
         newlines : true
-    },
-    temp    = path.join(__dirname, "/temp.js");;
+    };    
 
 describe("yui-seeder", function() {
     describe("CLI (stdout)", function() {

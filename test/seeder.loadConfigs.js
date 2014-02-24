@@ -31,7 +31,7 @@ describe("yui-seeder", function() {
 
             assert(typeof config === "object");
             assert(config.groups);
-            assert(config.groups.one)
+            assert(config.groups.one);
             assert(config.groups.two);
         });
 

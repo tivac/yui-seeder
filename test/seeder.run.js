@@ -20,7 +20,7 @@ describe("yui-seeder", function() {
 
         it("should throw when no callback is provided", function() {
             var s = new Seeder();
-            debugger;
+
             assert.throws(function() {
                 s.run();
             });
