@@ -14,14 +14,8 @@ var fs     = require("fs"),
     temp    = path.join(__dirname, "/temp.js");;
 
 describe("yui-seeder", function() {
-    describe("CLI", function() {
-        afterEach(function(done) {
-            if(fs.existsSync(temp)) {
-                return fs.unlink(temp, done);
-            }
-
-            done();
-        });
+    describe("CLI (stdout)", function() {
+        
 
         it("should display help on -h", function(done) {
             nixt(options)
@@ -33,7 +27,7 @@ describe("yui-seeder", function() {
         it("should require modules", function(done) {
             nixt(options)
                 .cwd("./test/specimens/simple")
-                .base("node ../../../bin/cli.js ")
+                .base(base)
                 .run("--config=fooga.js")
                 .stdout(/modules argument is required/)
                 .code(1)
@@ -85,6 +79,16 @@ describe("yui-seeder", function() {
                 .stdout(/YUI\.add\("f"/)
                 .end(done);
         });
+    });
+
+    describe("CLI (writing to file)", function() {
+        afterEach(function(done) {
+            if(fs.existsSync(temp)) {
+                return fs.unlink(temp, done);
+            }
+
+            done();
+        });
 
         it("should output to the configured file", function(done) {
             nixt(options)
@@ -129,19 +133,6 @@ describe("yui-seeder", function() {
                 .match(temp, /YUI\.add\("b"/)
                 .match(temp, /YUI\.add\("c"/)
                 .end(done);
-        });
-    });
-
-    describe.skip("CLI-Node", function() {
-        var proxyquire = require("proxyquire");
-
-        it("should display help on -h", function(done) {
-            var cli = proxyquire("./bin/cli.js", {
-                    process : {
-                        argv : "node bin/cli.js -h".split(" "),
-
-                    }
-                })
         });
     });
 });

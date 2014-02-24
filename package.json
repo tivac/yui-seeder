@@ -36,11 +36,9 @@
     "istanbul": "~0.2.4",
     "jshint": "~2.4.4",
     "jscs": "~1.2.4",
-    "nixt": "~0.3.0",
-    "proxyquire": "~0.5.2"
+    "nixt": "~0.3.0"
   },
   "dependencies": {
-    "shelljs": "~0.2.6",
     "yui": "~3.14.1",
     "nomnom": "~1.6.2",
     "globule": "~0.2.0",
