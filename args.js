@@ -10,14 +10,14 @@ module.exports = {
     },
 
     configs : {
-        string   : "-c CONFIG --configs=CONFIG",
+        string   : "-c CONFIG, --config=CONFIG",
         help     : "Config file paths",
         list     : true,
         required : true
     },
 
     output : {
-        string  : "-o FILE   --output=FILE",
+        string  : "-o FILE,   --output=FILE",
         help    : "File to write merged modules to",
         default : "stdout"
     },
