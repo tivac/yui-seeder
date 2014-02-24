@@ -1,6 +1,6 @@
 {
   "name": "yui-seeder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate YUI module \"seed\" files, a collection of requirements",
   "main": "lib/seeder.js",
   "bin": {
