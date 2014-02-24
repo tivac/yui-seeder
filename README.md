@@ -1,5 +1,9 @@
 yui-seeder
 ==========
+[![Build Status](https://travis-ci.org/tivac/yui-seeder.png?branch=master)](https://travis-ci.org/tivac/yui-seeder)
+[![NPM version](https://badge.fury.io/js/yui-seeder.png)](http://badge.fury.io/js/yui-seeder)
+[![Dependency Status](https://david-dm.org/tivac/yui-seeder.png?theme=shields.io)](https://david-dm.org/tivac/yui-seeder)
+[![devDependency Status](https://david-dm.org/tivac/yui-seeder/dev-status.png?theme=shields.io)](https://david-dm.org/tivac/yui-seeder#info=devDependencies)
 
 Create single file seeds for your YUI application based off existing modules or aliases.
 
