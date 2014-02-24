@@ -43,6 +43,7 @@
     "nomnom": "~1.6.2",
     "globule": "~0.2.0",
     "kat": "~0.3.0",
-    "concat-stream": "~1.4.1"
+    "concat-stream": "~1.4.1",
+    "lodash.merge": "~2.4.1"
   }
 }

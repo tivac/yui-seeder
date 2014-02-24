@@ -8,10 +8,11 @@ module.exports = {
         required : true
     },
 
-    config : {
-        string  : "-c CONFIG --config=CONFIG",
-        help    : "Glob filter used to locate the YUI module config",
-        default : "**/_config.js"
+    configs : {
+        string   : "-c CONFIG --configs=CONFIG",
+        help     : "Config file paths to resolve modules dependencies",
+        list     : true,
+        required : true
     },
 
     output : {
