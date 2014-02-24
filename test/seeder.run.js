@@ -91,6 +91,26 @@ describe("yui-seeder", function() {
             });
         });
 
+        it("should pass the combined modules from multiple configs to done", function(done) {
+            var s = new Seeder({
+                cwd     : "./test/specimens/multiple",
+                configs : [ "./one/_config.js", "./two/_config.js" ],
+                modules : [ "a", "f" ]
+            });
+
+            s.run(function(err, data) {
+                assert.ifError(err);
+                
+                assert(data);
+                assert(data.indexOf("YUI.add(\"a") > -1);
+                assert(data.indexOf("YUI.add(\"b") > -1);
+                assert(data.indexOf("YUI.add(\"c") > -1);
+                assert(data.indexOf("YUI.add(\"f") > -1);
+
+                done();
+            });
+        });
+
         it("should write the combined modules to a file", function(done) {
             var s = new Seeder({
                 cwd     : "./test/specimens/simple",
